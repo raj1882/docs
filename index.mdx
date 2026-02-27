@@ -1,97 +1,64 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "KCL Policy Hub"
+description: "Complete repository of 211 King's College London policies, procedures and regulations"
 ---
 
-## Setting up
+<img src="/logo/light.svg" alt="KCL Policy Hub" className="hidden dark:block" width="200" />
+<img src="/logo/dark.svg" alt="KCL Policy Hub" className="block dark:hidden" width="200" />
 
-Get your documentation site up and running in minutes.
+# King's College London Policy Hub
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+Welcome to the complete index of **211 College policies, procedures, and regulations**. 
 
-## Make it yours
+<Info>
+  This documentation site provides searchable access to all KCL policies. Use the tabs above to browse by category, or visit the **Search** tab to find specific documents.
+</Info>
 
-Design a docs site that looks great and empowers your users.
+## Quick Access
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={3}>
+  <Card title="All Policies" icon="list" href="/policies/all-policies">
+    Browse the complete policy index
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Search" icon="magnifying-glass" href="/search">
+    Find policies by keyword
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Academic" icon="graduation-cap" href="/policies/academic">
+    Academic policies and procedures
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+## Browse by Category
 
-Everything you need to create world-class documentation.
+<CardGroup cols={2}>
+  <Card title="Academic Policies" icon="book-open" href="/policies/academic">
+    Admissions, academic integrity, study regulations, research integrity
+  </Card>
+  <Card title="Student Policies" icon="users" href="/policies/student">
+    Student conduct, appeals, wellbeing, accommodation
+  </Card>
+  <Card title="Staff Policies" icon="briefcase" href="/policies/staff">
+    Employment, HR procedures, grievances, disciplinary
+  </Card>
+  <Card title="Safety & Compliance" icon="shield-check" href="/policies/safety">
+    Health & safety, data protection, security, safeguarding
+  </Card>
+  <Card title="Research" icon="microscope" href="/policies/research">
+    Research ethics, grants, intellectual property
+  </Card>
+</CardGroup>
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+---
 
-## Need inspiration?
+## Mission Control Integration
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<Tip>
+  This policy hub is backed by **Mission Control** — a custom indexing system with:
+  - Page-level RAG (no chunking)
+  - Question-answering via LLM
+  - Policy cross-referencing
+</Tip>
+
+<Note>
+  Policies are updated periodically. Last full index: **February 2026**
+</Note>
