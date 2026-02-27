@@ -1,68 +1,65 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "KCL Policy Hub",
+  "description": "Complete KCL Policy Index - 211 Policy Documents",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#4F46E5",
+    "light": "#6366F1",
+    "dark": "#3730A3"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Policies",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Overview",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "policies/all-policies"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Academic Policies",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "policies/academic"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Student Policies",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "policies/student"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Staff Policies",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "policies/staff"
+            ]
+          },
+          {
+            "group": "Safety & Compliance",
+            "pages": [
+              "policies/safety"
+            ]
+          },
+          {
+            "group": "Research Policies",
+            "pages": [
+              "policies/research"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Search",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Search",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "search"
             ]
           }
         ]
@@ -71,14 +68,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Mission Control",
+          "href": "https://rav-9b886b1a.mintlify.app",
+          "icon": "rocket"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "KCL Website",
+          "href": "https://www.kcl.ac.uk",
+          "icon": "building"
         }
       ]
     }
@@ -91,32 +88,27 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:policies@kcl.ac.uk"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Search Policies",
+      "href": "/search"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/raj1882"
     }
   }
 }
