@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KCL Policy Search</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        input { width: 100%; padding: 15px; font-size: 16px; border: 2px solid #4F46E5; border-radius: 8px; }
+        button { background: #4F46E5; color: white; padding: 15px 30px; border: none; border-radius: 8px; cursor: pointer; margin-top: 10px; }
+        button:hover { background: #3730A3; }
+        .result { margin-top: 20px; padding: 15px; background: #f5f5f5; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>KCL Policy Search</h1>
+    <p>Ask any question about KCL policies</p>
+    
+    <input type="text" id="question" placeholder="What is the admissions policy?">
+    <button onclick="search()">Search</button>
+    
+    <div id="result" class="result" style="display:none;"></div>
+    
+    <script>
+        async function search() {
+            const q = document.getElementById('question').value;
+            const result = document.getElementById('result');
+            result.style.display = 'block';
+            result.innerHTML = 'Searching...';
+            
+            try {
+                const response = await fetch('http://localhost:8000/query', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({question: q, max_iterations: 3})
+                });
+                const data = await response.json();
+                result.innerHTML = '<h3>Answer:</h3><p>' + data.answer + '</p>';
+            } catch(e) {
+                result.innerHTML = '<p>Error: ' + e.message + '</p>';
+            }
+        }
+        
+        document.getElementById('question').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') search();
+        });
+    </script>
+</body>
+</html>

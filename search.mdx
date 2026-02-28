@@ -5,34 +5,37 @@ description: "Search across all 211 KCL policies"
 
 # Policy Search
 
-Use this page to search the complete policy index. 
+Ask any question about KCL policies and get an instant answer.
 
 <Info>
-  Search is integrated with the Mission Control indexing system. Full semantic search coming soon with Page Index RAG.
+  Search is powered by **Mission Control** — Page Index RAG with LLM integration. Queries 211 policies in real-time.
 </Info>
 
-## Quick Search
+## Ask a Question
 
-<Tabs>
-  <Tab title="By Keyword">
-    Search for keywords like "admissions", "disciplinary", "leave", "safety"
-  </Tab>
-  <Tab title="By Category">
-    - Academic
-    - Student
-    - Staff / HR
-    - Safety
-    - Research
-    - Administrative
-  </Tab>
-  <Tab title="By Document Type">
-    - Policy
-    - Procedure
-    - Regulation
-    - SOP (Standard Operating Procedure)
-    - Framework
-  </Tab>
-</Tabs>
+<Card title="Open Policy Search" icon="magnifying-glass" href="http://localhost:8000" horizontal>
+  Launch the Mission Control search interface
+</Card>
+
+## API Endpoints
+
+| Endpoint | Description | Try It |
+|----------|-------------|--------|
+| `/search?query=` | Keyword search by title | [Try](/search?query=admissions) |
+| `/query` | Natural language Q&A | `POST http://localhost:8000/query` |
+| `/toc` | Full table of contents | [View](/toc) |
+
+## Example Queries
+
+```bash
+# Search by keyword
+curl "http://localhost:8000/search?query=admissions"
+
+# Ask natural language question
+curl -X POST "http://localhost:8000/query" \
+  -H "Content-Type: application/json" \
+  -d '{"question": "What is the admissions policy?"}'
+```
 
 ## Download All Policies
 
